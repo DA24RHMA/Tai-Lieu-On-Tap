@@ -47,5 +47,4 @@ window.SUBJECT_DATA = {
     decks: allDeckFiles 
 };
 
-
 // --- KẾT THÚC FILE kst_data.js ---
