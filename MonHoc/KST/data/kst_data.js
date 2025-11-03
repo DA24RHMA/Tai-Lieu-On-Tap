@@ -36,7 +36,7 @@ const allDeckFiles = [
 	},
 	{ 
         id: 'chuong2-5', 
-        name: 'Chương 2 - Trùng sốt rét', 
+        name: 'Chương 2 - Trùng sốt rét - 191 câu', 
         file: 'Chuong2-5.csv'
 	},
 ];
@@ -46,5 +46,6 @@ window.SUBJECT_DATA = {
     info: subjectInfo,
     decks: allDeckFiles 
 };
+
 
 // --- KẾT THÚC FILE kst_data.js ---
