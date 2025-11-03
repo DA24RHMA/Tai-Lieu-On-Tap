@@ -6,30 +6,19 @@
     <meta name="subject-info" data-id="kst" data-name="KST">
     
     <title>Ôn tập KST</title>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="subject-info" data-id="kst" data-name="KST">
-    <title>Ôn tập KST</title>
-    
-    <base href="../../"> 
-    
-    <link rel="stylesheet" href="kst_style.css">
-    
-</head>
     
     <link rel="stylesheet" href="kst_style.css">
 </head>
 <body>
 
-    <a href="index.html" class="back-to-hall-btn">❮ Quay về (Chọn môn)</a>
+    <a href="../../index.html" class="back-to-hall-btn">❮ Quay về (Chọn môn)</a>
 
     <div class="music-control">
         <audio id="bg-music" src="" loop></audio> 
         <label for="music-select">Chọn Nhạc Nền:</label>
         <select id="music-select">
             <option value="none">-- Tắt Nhạc --</option>
-            <option value="assets/tien-quan-ca.mp3" selected>Tiến Quân Ca</option>
+            <option value="../../assets/tien-quan-ca.mp3" selected>Tiến Quân Ca</option>
             <option value="../../assets/viet-tiep-cau-chuyen-hoa-binh.mp3">Viết tiếp câu chuyện hoà bình</option>
         </select>
         <button id="music-toggle-btn">Bật Nhạc 🎵</button>
@@ -145,11 +134,10 @@
         </div>
     </div>
     
-<script src="data/kst_data.js"></script>
+    <script src="data/kst_data.js"></script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
     
     <script src="../../game_logic.js"></script>
-    
 </body>
 </html>
