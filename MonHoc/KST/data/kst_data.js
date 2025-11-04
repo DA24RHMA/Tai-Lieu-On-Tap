@@ -39,6 +39,41 @@ const allDeckFiles = [
         name: 'Chương 2 - Trùng sốt rét - 191 câu', 
         file: 'Chuong2-5.csv'
 	},
+	{ 
+        id: 'chuong3-1', 
+        name: 'Chương 3 - Giun đũa - 161 câu', 
+        file: 'Chuong3-1.csv'
+	},
+	{ 
+        id: 'chuong3-2', 
+        name: 'Chương 3 - Giun tóc - 86 câu', 
+        file: 'Chuong3-2.csv'
+	},
+	{ 
+        id: 'chuong3-3', 
+        name: 'Chương 3 - Giun móc - 137 câu', 
+        file: 'Chuong3-3.csv'
+	},
+	{ 
+        id: 'chuong3-4', 
+        name: 'Chương 3 - lươn  - 17 câu', 
+        file: 'Chuong3-4.csv'
+	},
+	{ 
+        id: 'chuong3-5', 
+        name: 'Chương 3 - Giun kim - 93 câu', 
+        file: 'Chuong3-5.csv'
+	},
+	{ 
+        id: 'chuong3-6', 
+        name: 'Chương 3 - Giun xoắn - 22 câu', 
+        file: 'Chuong3-6.csv'
+	},
+	{ 
+        id: 'chuong3-7', 
+        name: 'Chương 3 - Giun chỉ hệ bạch huyết - 78 câu', 
+        file: 'Chuong3-7.csv'
+	},
 ];
 
 // 3. Gán dữ liệu vào biến toàn cục (BẮT BUỘC)
