@@ -117,6 +117,9 @@ const musicToggleBtn = document.getElementById('music-toggle-btn');
 const musicSelect = document.getElementById('music-select');
 const shuffleOptionsDeck = document.getElementById('toggle-shuffle-options-deck');
 const shuffleOptionsRandom = document.getElementById('toggle-shuffle-options-random');
+// === THÊM DOM MỚI ===
+const themeSelect = document.getElementById('theme-select');
+const THEME_KEY = `${SUBJECT_ID}_theme`; // Key để lưu theme
 
 // =======================================================
 // ================== HỖ TRỢ DỮ LIỆU =====================
@@ -765,6 +768,32 @@ function resetAllData() {
 // =======================================================
 // ================== MUSIC / UTIL ========================
 // =======================================================
+// === THÊM CÁC HÀM THEME ===
+function applyTheme(themeName) {
+  // Gán theme cho body, ví dụ: <body data-theme="dark">
+  document.body.dataset.theme = themeName;
+  // Lưu lựa chọn vào localStorage
+  try {
+    localStorage.setItem(THEME_KEY, themeName);
+  } catch (e) {
+    console.warn('Không lưu được theme:', e);
+  }
+}
+
+function loadTheme() {
+  let savedTheme = 'kst-purple'; // Mặc định
+  try {
+    savedTheme = localStorage.getItem(THEME_KEY) || 'kst-purple';
+  } catch (e) {
+    console.warn('Không tải được theme:', e);
+  }
+  
+  if (themeSelect) {
+    themeSelect.value = savedTheme;
+  }
+  applyTheme(savedTheme);
+}
+// ==========================
 function updateMusicPlayer() {
   if (!musicSelect) return;
   const selected = musicSelect.value;
@@ -902,6 +931,11 @@ function attachEventListeners() {
 
   if (musicSelect) musicSelect.addEventListener('change', updateMusicPlayer);
   if (musicToggleBtn) musicToggleBtn.addEventListener('click', toggleMusic);
+  if (themeSelect) {
+    themeSelect.addEventListener('change', (e) => {
+      applyTheme(e.target.value);
+    });
+  }
 }
 
 // =======================================================
@@ -1002,6 +1036,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   // update music
   if (musicSelect && musicSelect.value === 'none' && musicToggleBtn) musicToggleBtn.disabled = true;
   updateMusicPlayer();
+  
+  // === TẢI THEME ĐÃ LƯU ===
+  loadTheme();
 
   // build merged data only when needed (lazy) but safe to initialize empty object
   // show menu
